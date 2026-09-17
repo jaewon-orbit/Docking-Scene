@@ -28,13 +28,13 @@ I built the Unity visualization and scripted the approach and docking sequence. 
 The output is a concept visualization for research communication. Motion depends on configured targets and scripted events; it does not establish real aircraft dynamics, recovery accuracy, or autonomous-control performance.
 
 This repository contains scene-control scripts and a Timeline asset. The full Unity scene and its models are not included.
+<br>
+<br>
+<br>
 
 <details>
 <summary><strong>Technical Implementation Details</strong> (click to expand)</summary>
 
-<br>
-<br>
-<br>
 ### Implementation Overview
 
 The scene was built to clearly illustrate the intended recovery sequence rather than to simulate real flight dynamics.
