@@ -28,3 +28,32 @@ I built the Unity visualization and scripted the approach and docking sequence. 
 The output is a concept visualization for research communication. Motion depends on configured targets and scripted events; it does not establish real aircraft dynamics, recovery accuracy, or autonomous-control performance.
 
 This repository contains scene-control scripts and a Timeline asset. The full Unity scene and its models are not included.
+
+<details>
+<summary><strong>Technical Implementation Details</strong> (click to expand)</summary>
+
+<br>
+<br>
+<br>
+### Implementation Overview
+
+The scene was built to clearly illustrate the intended recovery sequence rather than to simulate real flight dynamics.
+
+- **Target-point guided approach**  
+  A sequence of waypoints defines the approach path toward the recovery basket on the moving ground vehicle.
+
+- **Trigger-based event sequence**  
+  Transparent trigger colliders along the trajectory fire sequential events (e.g., detachment, speed change, attachment) to control the demonstration flow.
+
+- **Smooth orientation changes**  
+  Quaternion interpolation (handled via coroutines) is used to produce continuous rotation during the approach and docking phases.
+
+- **Camera presentation**  
+  Cinemachine and a Timeline track are used to create a cinematic camera path that follows each stage of the sequence.
+
+- **Physics update timing**  
+  Critical motion updates are placed in `FixedUpdate()` for consistent simulation stepping within Unity.
+
+These elements were chosen to make the overall recovery concept easy to follow for research partners and stakeholders.
+
+</details>
